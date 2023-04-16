@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json())
 const tasks = require("./routes/tasks");
 app.use("/api/v1/tasks", tasks)
+app.use(express.static("./public"))
 
 const start = async () => {
     try {
